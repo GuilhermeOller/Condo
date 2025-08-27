@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Acesso_Moradores_Visitantes.props" />
+</Project>

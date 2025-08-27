@@ -1,0 +1,850 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Vivência - Acesso Moradores</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2A6B7E;
+            --primary-light: #3A8CA5;
+            --primary-dark: #1A4B5A;
+            --secondary-color: #FF9E1B;
+            --accent-color: #E86A33;
+            --text-color: #2C3E50;
+            --text-light: #7F8C8D;
+            --light-bg: #F8F9FA;
+            --white: #FFFFFF;
+            --error-color: #E74C3C;
+            --success-color: #27AE60;
+            --warning-color: #F39C12;
+            --border-radius: 16px;
+            --border-radius-sm: 8px;
+            --box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            --box-shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #E6F7FF 0%, #FFFFFF 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text-color);
+            line-height: 1.6;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        #app-container {
+            width: 100%;
+            max-width: 480px;
+            position: relative;
+            min-height: 800px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .screen {
+            position: absolute;
+            width: 100%;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow-lg);
+            padding: 40px 30px;
+            transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.5s ease;
+            opacity: 0;
+            transform: translateX(100%);
+            top: 0;
+            left: 0;
+        }
+
+            .screen.active {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            .screen.left {
+                transform: translateX(-100%);
+            }
+
+        .app-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .brand-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            box-shadow: 0 4px 10px rgba(42, 107, 126, 0.3);
+        }
+
+            .brand-icon i {
+                color: white;
+                font-size: 1.5rem;
+            }
+
+        .brand-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        .brand-tagline {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 1.8rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+            .input-group label {
+                display: block;
+                margin-bottom: 8px;
+                font-size: 0.9rem;
+                color: var(--text-color);
+                font-weight: 500;
+            }
+
+            .input-group i {
+                position: absolute;
+                left: 15px;
+                top: 40px;
+                color: var(--text-light);
+                font-size: 1.1rem;
+            }
+
+            .input-group input {
+                width: 100%;
+                padding: 14px 14px 14px 45px;
+                border: 1px solid #E8F0FE;
+                border-radius: var(--border-radius-sm);
+                font-size: 0.95rem;
+                transition: var(--transition);
+                background-color: var(--light-bg);
+                font-family: 'Nunito', sans-serif;
+            }
+
+                .input-group input:focus {
+                    outline: none;
+                    border-color: var(--primary-light);
+                    box-shadow: 0 0 0 3px rgba(58, 140, 165, 0.2);
+                    background-color: var(--white);
+                }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            border: none;
+            border-radius: var(--border-radius-sm);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(42, 107, 126, 0.3);
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 7px 20px rgba(42, 107, 126, 0.4);
+            }
+
+            .btn:active {
+                transform: translateY(0);
+            }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            box-shadow: 0 4px 15px rgba(232, 106, 51, 0.3);
+        }
+
+            .btn-secondary:hover {
+                box-shadow: 0 7px 20px rgba(232, 106, 51, 0.4);
+            }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        .forgot-password {
+            display: block;
+            text-align: right;
+            margin: 10px 0 20px;
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+            .forgot-password:hover {
+                color: var(--primary-dark);
+                text-decoration: underline;
+            }
+
+        .link-text {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+            .link-text a {
+                color: var(--primary-color);
+                text-decoration: none;
+                font-weight: 600;
+                transition: var(--transition);
+            }
+
+                .link-text a:hover {
+                    color: var(--primary-dark);
+                    text-decoration: underline;
+                }
+
+        .loading {
+            display: none;
+            margin: 16px 0;
+            color: var(--primary-color);
+            font-size: 14px;
+            text-align: center;
+        }
+
+            .loading.show {
+                display: block;
+            }
+
+            .loading i {
+                animation: spin 1s linear infinite;
+                margin-right: 8px;
+            }
+
+        @@keyframes spin {
+            0%
+
+        {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+
+        }
+
+        .error {
+            color: var(--error-color);
+            margin-top: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 14px 20px;
+            border-radius: var(--border-radius);
+            color: var(--white);
+            font-weight: 500;
+            box-shadow: var(--box-shadow);
+            transform: translateX(120%);
+            transition: var(--transition);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            max-width: 90%;
+            font-size: 14px;
+        }
+
+            .notification.show {
+                transform: translateX(0);
+            }
+
+            .notification.success {
+                background-color: var(--success-color);
+            }
+
+            .notification.error {
+                background-color: var(--error-color);
+            }
+
+            .notification i {
+                margin-right: 8px;
+                font-size: 16px;
+            }
+
+        .recovery-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+            .recovery-steps::before {
+                content: '';
+                position: absolute;
+                top: 14px;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background-color: #E8F0FE;
+                z-index: 1;
+            }
+
+        .step {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #E8F0FE;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 2;
+        }
+
+            .step.active {
+                background-color: var(--primary-color);
+                color: white;
+            }
+
+            .step.completed {
+                background-color: var(--success-color);
+                color: white;
+            }
+
+        /* Responsividade */
+        @@media (max-width: 480px) {
+            .screen
+
+        {
+            padding: 30px 20px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        .input-group input {
+            padding: 12px 12px 12px 40px;
+        }
+
+        .btn {
+            padding: 12px;
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div id="app-container">
+        <!-- Tela de Login -->
+        <div class="screen active" id="login-screen">
+            <div class="app-header">
+                <div class="brand">
+                    <div class="brand-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div>
+                        <div class="brand-name">Vivência</div>
+                        <div class="brand-tagline">Portal do Condomínio</div>
+                    </div>
+                </div>
+                <h2>Acesso Visitante</h2>
+            </div>
+
+            <div class="card">
+                <div class="input-group">
+                    <label for="usuario">Usuário</label>
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="usuario" placeholder="Digite o usuário ou email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+                </div>
+
+                <a class="forgot-password" onclick="showScreen('recover-step1')">Esqueceu a senha?</a>
+
+                <button class="btn" onclick="fazerLogin()">
+                    <i class="fas fa-sign-in-alt"></i> Entrar
+                </button>
+
+                <div class="loading" id="loading">
+                    <i class="fas fa-spinner"></i> Autenticando...
+                </div>
+
+                <div class="error" id="error"></div>
+            </div>
+
+            <p class="link-text">
+                Não tem conta? <a href="#" onclick="showScreen('register-screen')">Solicitar acesso</a>
+            </p>
+        </div>
+
+        <!-- Tela de Cadastro -->
+        <div class="screen" id="register-screen">
+            <div class="app-header">
+                <div class="brand">
+                    <div class="brand-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div>
+                        <div class="brand-name">Vivência</div>
+                        <div class="brand-tagline">Solicitar Acesso</div>
+                    </div>
+                </div>
+                <h2>Solicitar Nova Conta</h2>
+            </div>
+
+            <div class="card">
+                <div class="input-group">
+                    <label for="cod">Código do Condomínio</label>
+                    <i class="fas fa-key"></i>
+                    <input type="text" id="cod" placeholder="Digite o código do condomínio" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="cadEmail">E-mail</label>
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="cadEmail" placeholder="Digite seu e-mail" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="cadUsuario">Usuário</label>
+                    <i class="fas fa-at"></i>
+                    <input type="text" id="cadUsuario" placeholder="Digite um nome de usuário" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="cadSenha">Senha</label>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="cadSenha" placeholder="Digite sua senha" required>
+                </div>
+
+                <button class="btn btn-secondary" onclick="cadastrar()">
+                    <i class="fas fa-user-plus"></i> Solicitar Acesso
+                </button>
+            </div>
+
+            <p class="link-text">
+                Já tem uma conta? <a href="#" onclick="showScreen('login-screen')">Faça login</a>
+            </p>
+        </div>
+
+        <!-- Telas de Recuperação de Senha (3 etapas) -->
+        <div class="screen" id="recover-step1">
+            <div class="app-header">
+                <div class="brand">
+                    <div class="brand-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div>
+                        <div class="brand-name">Vivência</div>
+                        <div class="brand-tagline">Recuperar Senha</div>
+                    </div>
+                </div>
+                <h2>Recuperar Senha</h2>
+            </div>
+
+            <div class="recovery-steps">
+                <div class="step active">1</div>
+                <div class="step">2</div>
+                <div class="step">3</div>
+            </div>
+
+            <div class="card">
+                <p style="margin-bottom: 25px; color: var(--text-light); font-size: 0.95rem; text-align: center;">
+                    Digite seu e-mail para receber o código de verificação
+                </p>
+
+                <div class="input-group">
+                    <label for="recover-email">E-mail</label>
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="recover-email" placeholder="Digite seu e-mail" required>
+                </div>
+
+                <button class="btn" onclick="sendRecoveryCode()">
+                    <i class="fas fa-paper-plane"></i> Enviar Código
+                </button>
+            </div>
+
+            <p class="link-text">
+                <a href="#" onclick="showScreen('login-screen')">
+                    <i class="fas fa-arrow-left" style="margin-right: 5px;"></i> Voltar para login
+                </a>
+            </p>
+        </div>
+
+        <div class="screen" id="recover-step2">
+            <div class="app-header">
+                <div class="brand">
+                    <div class="brand-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div>
+                        <div class="brand-name">Vivência</div>
+                        <div class="brand-tagline">Verificação</div>
+                    </div>
+                </div>
+                <h2>Verifique seu e-mail</h2>
+            </div>
+
+            <div class="recovery-steps">
+                <div class="step completed">1</div>
+                <div class="step active">2</div>
+                <div class="step">3</div>
+            </div>
+
+            <div class="card">
+                <p style="margin-bottom: 25px; color: var(--text-light); font-size: 0.95rem; text-align: center;">
+                    Enviamos um código para <span id="email-display" style="font-weight: 600; color: var(--primary-color);"></span>
+                </p>
+
+                <div class="input-group">
+                    <label for="recovery-code">Código de verificação</label>
+                    <i class="fas fa-shield-alt"></i>
+                    <input type="text" id="recovery-code" placeholder="Digite o código recebido" required>
+                </div>
+
+                <button class="btn" onclick="verifyRecoveryCode()">
+                    <i class="fas fa-check"></i> Verificar
+                </button>
+            </div>
+        </div>
+
+        <div class="screen" id="recover-step3">
+            <div class="app-header">
+                <div class="brand">
+                    <div class="brand-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div>
+                        <div class="brand-name">Vivência</div>
+                        <div class="brand-tagline">Nova Senha</div>
+                    </div>
+                </div>
+                <h2>Nova Senha</h2>
+            </div>
+
+            <div class="recovery-steps">
+                <div class="step completed">1</div>
+                <div class="step completed">2</div>
+                <div class="step active">3</div>
+            </div>
+
+            <div class="card">
+                <p style="margin-bottom: 25px; color: var(--text-light); font-size: 0.95rem; text-align: center;">
+                    Digite e confirme sua nova senha
+                </p>
+
+                <div class="input-group">
+                    <label for="new-password">Nova Senha</label>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="new-password" placeholder="Digite sua nova senha" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirm-password">Confirmar Senha</label>
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirm-password" placeholder="Confirme sua nova senha" required>
+                </div>
+
+                <button class="btn" onclick="updatePassword()">
+                    <i class="fas fa-save"></i> Salvar Nova Senha
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Controle das telas
+        function showScreen(screenId) {
+            document.querySelectorAll('.screen').forEach(screen => {
+                screen.classList.remove('active', 'left');
+            });
+
+            const screen = document.getElementById(screenId);
+            screen.classList.add('active');
+
+            if (event) {
+                const currentScreen = event.currentTarget.closest('.screen');
+                currentScreen.classList.add('left');
+            }
+        }
+
+        async function fazerLogin() {
+            const usuario = document.getElementById("usuario").value;
+            const senha = document.getElementById("senha").value;
+            const errorDiv = document.getElementById("error");
+            const loadingDiv = document.getElementById("loading");
+            const ip = await obterIpPublico();
+
+            errorDiv.textContent = "";
+
+            if (!usuario || !senha) {
+                errorDiv.textContent = "Por favor, preencha todos os campos.";
+                return;
+            }
+
+            loadingDiv.classList.add("show");
+
+            try {
+                const resposta = await fetch("/LoginApi/Login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    credentials: 'include',
+                    body: JSON.stringify({ usuario, senha, ip })
+                });
+
+                if (resposta.ok) {
+                    window.location.href = "/Visitante/Index";
+                } else {
+                    const dadosErro = await resposta.json();
+                    errorDiv.textContent = dadosErro.erro || "Usuário ou senha inválidos";
+                }
+            } catch (erro) {
+                errorDiv.textContent = "Erro ao conectar com o servidor. Tente novamente.";
+                console.error("Erro no login:", erro);
+            } finally {
+                loadingDiv.classList.remove("show");
+            }
+        }
+
+        async function cadastrar() {
+            const ip = await obterIpPublico();
+            const usuario = document.getElementById("cadUsuario").value;
+            const email = document.getElementById("cadEmail").value;
+            const cod = document.getElementById("cod").value;
+            const senha = document.getElementById("cadSenha").value;
+
+            if (!usuario || !senha || !email || !cod) {
+                showNotification('Por favor preencha todos os campos', 'error');
+                return;
+            }
+
+            try {
+                const resposta = await fetch("/LoginApi/Cadastrar", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    credentials: 'include',
+                    body: JSON.stringify({ usuario, senha, email, cod, ip })
+                });
+
+                if (resposta.ok) {
+                    showNotification('Solicitação de acesso enviada com sucesso!', 'success');
+                    showScreen('login-screen');
+                } else {
+                    const dadosErro = await resposta.json();
+                    showNotification(dadosErro.erro || 'Erro ao solicitar acesso', 'error');
+                }
+            } catch (erro) {
+                showNotification("Erro ao conectar com o servidor. Tente novamente.", 'error');
+                console.error("Erro no cadastro:", erro);
+            }
+        }
+
+        async function sendRecoveryCode() {
+            const Email = document.getElementById('recover-email').value;
+            if (!Email) {
+                showNotification('Por favor, digite seu e-mail', 'error');
+                return;
+            }
+            try{
+                const Ip = await obterIpPublico();
+
+                const res = await fetch(`/LoginApi/EnviarToken`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    credentials: 'include',
+                    body: JSON.stringify({ Email, Ip })
+
+                });
+
+                if (res.ok) {
+                    document.getElementById('email-display').textContent = Email;
+                    showScreen('recover-step2');
+                    showNotification('Código enviado para seu e-mail!', 'success');
+                } else {
+                    const dadosErro = await res.json();
+                    showNotification(dadosErro.erro || 'Erro ao enviar código', 'error');
+                }
+            } catch (erro) {
+                showNotification('Erro ao enviar código: ' + erro, 'error');
+            }
+        }
+
+        async function verifyRecoveryCode() {
+            const code = document.getElementById('recovery-code').value;
+            if (!code) {
+                showNotification('Por favor, digite o código recebido', 'error');
+                return;
+            }
+            try{
+                const res = await fetch(`/LoginApi/VerificaToken/${code}`, {
+                method: 'POST',
+                credentials: 'include'
+                });
+
+            if (res.ok) {
+                showScreen('recover-step3');
+                showNotification('Código correto!', 'success');
+            } else {
+                const dadosErro = await res.json();
+                showNotification(dadosErro.erro || 'Erro ao verificar código', 'error');
+            }
+            } catch (erro) {
+                showNotification('Erro ao verificar código: ' + erro, 'error');
+            }
+        }
+
+        async function updatePassword() {
+            const newPassword = document.getElementById('new-password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (!newPassword || !confirmPassword) {
+                showNotification('Por favor, preencha ambos os campos', 'error');
+                return;
+            }
+
+            if (newPassword !== confirmPassword) {
+                showNotification('As senhas não coincidem', 'error');
+                return;
+            }
+
+            try{
+                const res = await fetch(`/LoginApi/UpdateSenha/${newPassword}`, {
+                method: 'PUT',
+                credentials: 'include'
+                });
+
+                if (res.ok) {
+                    showScreen('login-screen');
+                    showNotification('Senha alterada com sucesso!', 'success');
+                } else {
+                    const dadosErro = await res.json();
+                    showNotification(dadosErro.erro || 'Erro ao alterar senha', 'error');
+                }
+
+            } catch (erro) {
+                showNotification('Erro ao alterar senha: ' + erro, 'error');
+            }
+        }
+
+        async function obterIpPublico() {
+            try {
+                const response = await fetch("https://api.ipify.org?format=json");
+                const data = await response.json();
+                return data.ip;
+            } catch (error) {
+                console.error("Erro ao obter IP:", error);
+                return "unknown";
+            }
+        }
+
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+                ${message}
+            `;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            }, 3000);
+        }
+
+        document.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                if (document.getElementById('login-screen').classList.contains('active')) {
+                    fazerLogin();
+                } else if (document.getElementById('register-screen').classList.contains('active')) {
+                    cadastrar();
+                } else if (document.getElementById('recover-step1').classList.contains('active')) {
+                    sendRecoveryCode();
+                } else if (document.getElementById('recover-step2').classList.contains('active')) {
+                    verifyRecoveryCode();
+                } else if (document.getElementById('recover-step3').classList.contains('active')) {
+                    updatePassword();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

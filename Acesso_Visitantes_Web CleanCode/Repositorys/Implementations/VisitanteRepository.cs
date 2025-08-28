@@ -136,9 +136,9 @@ namespace Acesso_Moradores_Visitantes.Repositorys.Implementations
         {
             return await _context.tblAcessos
                     .AnyAsync(va =>
-                        va.IdOrigem == idVisitante &&
+                        va.idVisitante == idVisitante &&
                         va.FlgOrigem == "V" &&
-                        va.IdVisitado == idUsuario &&
+                        va.idMorador == idUsuario &&
                         va.TipoVisitado == tipoLogin &&
                         va.DtSaida == null);
         }
@@ -146,7 +146,7 @@ namespace Acesso_Moradores_Visitantes.Repositorys.Implementations
         public async Task<long> BuscarIdAcessoPorIdAsync(long idVisitante, long idUsuario)
         {
             return await _context.tblAcessos
-                         .Where(v => v.IdOrigem == idVisitante && v.IdVisitado == idUsuario && v.DtSaida == null)
+                         .Where(v => v.idVisitante == idVisitante && v.idMorador == idUsuario && v.DtSaida == null)
                          .Select(v => v.IdAcesso)
                          .FirstOrDefaultAsync();
         }
@@ -208,7 +208,7 @@ namespace Acesso_Moradores_Visitantes.Repositorys.Implementations
 
         public async Task<string> BuscarPathImagesAsync()
         {
-            return await _context.tblParametros.Select(p => p.PathImages).FirstOrDefaultAsync();
+            return await _context.tblParametros.Select(p => p.pathImagens).FirstOrDefaultAsync();
         }
         #endregion
     }

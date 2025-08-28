@@ -39,14 +39,14 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
             visitante.FlgTipo = string.IsNullOrWhiteSpace(visitante.Empresa) ? "V" : "P";
 
             // Verifica se já existe um visitante com o mesmo nome
-            Visitantes visitanteExistente = await _visitanteR.BuscarVisitantePorNomeAsync(visitante.Visitante);
+            Visitantes visitanteExistente = await _visitanteR.BuscarVisitantePorNomeAsync(visitante.nomeVisitante);
 
             if (visitanteExistente != null)
             {
-                visitanteExistente.Visitante = visitante.Visitante;
+                visitanteExistente.nomeVisitante = visitante.nomeVisitante;
                 visitanteExistente.Empresa = visitante.Empresa;
-                visitanteExistente.FoneCelular = visitante.FoneCelular;
-                visitanteExistente.email = visitante.email;
+                visitanteExistente.celularVisitante = visitante.celularVisitante;
+                visitanteExistente.emailVisitante = visitante.emailVisitante;
                 visitanteExistente.Endereco = visitante.Endereco;
                 visitanteExistente.Numero = visitante.Numero;
                 visitanteExistente.Bairro = visitante.Bairro;
@@ -155,7 +155,7 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
             DateTime deData = acesso.de;
             DateTime ateData = acesso.ate;
             long idOrigem = 0;
-            long idVisitante = acesso.IdOrigem;
+            long idVisitante = acesso.idVisitante;
             string nomeMorador = null;
             using var transaction = await _context.Database.BeginTransactionAsync();
 
@@ -180,11 +180,11 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
                 int numCracha = int.Parse(numCrachaString);
                 var novoAcesso = new Acessos
                 {
-                    NumCracha = numCracha,
+                    numAcesso = numCracha,
                     CrachaLiberado = 1,
                     FlgOrigem = "V",
-                    IdOrigem = idVisitante,
-                    IdVisitado = idUsuario,
+                    idVisitante = idVisitante,
+                    idMorador = idUsuario,
                     FlgPortao = "E",
                     FlgTpAcesso = "W",
                     DtEntrada = null,
@@ -209,7 +209,7 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
                     IdOrigem = idVisitante,
                     FlgCondutor = 1,
                     FlgStatusAcesso = "A",
-                    Visitante = visitante.Visitante,
+                    Visitante = visitante.nomeVisitante,
                     numcracha = numCracha,
                     DtSaida = null
                 });
@@ -244,10 +244,10 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
                 {
                     await _visitanteR.AdicionarLogAcessoAsync(new LogAcessos
                     {
-                        Ip = acesso.ip,
-                        NomeUsuario = nomeLogin,
-                        NomeVisitante = visitante.Visitante,
-                        Data = DateTime.Now
+                        ip = acesso.ip,
+                        idLogin = nomeLogin,
+                        idVisitante = visitante.nomeVisitante,
+                        data = DateTime.Now
                     });
                 }
                 catch (Exception ex)
@@ -265,7 +265,7 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
                 {
                     if (metodo == 0)
                     {
-                        await _geral.EnviarZapViaZAPIAsync(visitante.FoneCelular, visitante.Visitante, numCrachaString, de, ate, tipo, nomeFesta, nomeLogin, null);
+                        await _geral.EnviarZapViaZAPIAsync(visitante.celularVisitante, visitante.nomeVisitante, numCrachaString, de, ate, tipo, nomeFesta, nomeLogin, null);
                     }
                     else if (metodo == 1)
                     {
@@ -273,24 +273,24 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
                         {
                             if (tipoVisitante == "n")
                             {
-                                await _geral.EnviarZapViaZAPIAsync(visitante.FoneCelular, visitante.Visitante, numCrachaString, de, ate, "festaComConviteUp", nomeFesta, nomeLogin, convite);
-                                await _geral.EnviarZapViaZAPIAsync(visitante.FoneCelular, visitante.Visitante, numCrachaString, de, ate, "apenasQr", nomeFesta, nomeLogin, null);
+                                await _geral.EnviarZapViaZAPIAsync(visitante.celularVisitante, visitante.nomeVisitante, numCrachaString, de, ate, "festaComConviteUp", nomeFesta, nomeLogin, convite);
+                                await _geral.EnviarZapViaZAPIAsync(visitante.celularVisitante, visitante.nomeVisitante, numCrachaString, de, ate, "apenasQr", nomeFesta, nomeLogin, null);
                             }
                             else if (tipoVisitante == "a")
                             {
-                                await _geral.EnviarZapViaZAPIAsync(visitante.FoneCelular, visitante.Visitante, numCrachaString, de, ate, "festaComConvite", nomeFesta, nomeLogin, convite);
-                                await _geral.EnviarZapViaZAPIAsync(visitante.FoneCelular, visitante.Visitante, numCrachaString, de, ate, "apenasQr", nomeFesta, nomeLogin, null);
+                                await _geral.EnviarZapViaZAPIAsync(visitante.celularVisitante, visitante.nomeVisitante, numCrachaString, de, ate, "festaComConvite", nomeFesta, nomeLogin, convite);
+                                await _geral.EnviarZapViaZAPIAsync(visitante.celularVisitante, visitante.nomeVisitante, numCrachaString, de, ate, "apenasQr", nomeFesta, nomeLogin, null);
                             }
 
                         }
                         else
                         {
-                            await _geral.EnviarZapViaZAPIAsync(visitante.FoneCelular, visitante.Visitante, numCrachaString, de, ate, tipo, nomeFesta, nomeLogin, null);
+                            await _geral.EnviarZapViaZAPIAsync(visitante.celularVisitante, visitante.nomeVisitante, numCrachaString, de, ate, tipo, nomeFesta, nomeLogin, null);
                         }
                     }
                     else if (metodo == 2)
                     {
-                        await _geral.EnviarEmailComImagemAsync(visitante.email, nomeFesta, nomeLogin, convite, visitante.Visitante, numCrachaString, de, ate, "Convite", null);
+                        await _geral.EnviarEmailComImagemAsync(visitante.emailVisitante, nomeFesta, nomeLogin, convite, visitante.nomeVisitante, numCrachaString, de, ate, "Convite", null);
                     }
                     else if (metodo == 3)
                     {
@@ -298,21 +298,21 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
                         {
                             if (tipoVisitante == "n")
                             {
-                                await _geral.EnviarZapViaZAPIAsync(visitante.FoneCelular, visitante.Visitante, numCrachaString, de, ate, "festaComConviteUp", nomeFesta, nomeLogin, convite);
-                                await _geral.EnviarZapViaZAPIAsync(visitante.FoneCelular, visitante.Visitante, numCrachaString, de, ate, "apenasQr", nomeFesta, nomeLogin, null);
+                                await _geral.EnviarZapViaZAPIAsync(visitante.celularVisitante, visitante.nomeVisitante, numCrachaString, de, ate, "festaComConviteUp", nomeFesta, nomeLogin, convite);
+                                await _geral.EnviarZapViaZAPIAsync(visitante.celularVisitante, visitante.nomeVisitante, numCrachaString, de, ate, "apenasQr", nomeFesta, nomeLogin, null);
                             }
                             else if (tipoVisitante == "a")
                             {
-                                await _geral.EnviarZapViaZAPIAsync(visitante.FoneCelular, visitante.Visitante, numCrachaString, de, ate, "festaComConvite", nomeFesta, nomeLogin, convite);
-                                await _geral.EnviarZapViaZAPIAsync(visitante.FoneCelular, visitante.Visitante, numCrachaString, de, ate, "apenasQr", nomeFesta, nomeLogin, null);
+                                await _geral.EnviarZapViaZAPIAsync(visitante.celularVisitante, visitante.nomeVisitante, numCrachaString, de, ate, "festaComConvite", nomeFesta, nomeLogin, convite);
+                                await _geral.EnviarZapViaZAPIAsync(visitante.celularVisitante, visitante.nomeVisitante, numCrachaString, de, ate, "apenasQr", nomeFesta, nomeLogin, null);
                             }
 
                         }
                         else
                         {
-                            await _geral.EnviarZapViaZAPIAsync(visitante.FoneCelular, visitante.Visitante, numCrachaString, de, ate, tipo, nomeFesta, nomeLogin, null);
+                            await _geral.EnviarZapViaZAPIAsync(visitante.celularVisitante, visitante.nomeVisitante, numCrachaString, de, ate, tipo, nomeFesta, nomeLogin, null);
                         }
-                        await _geral.EnviarEmailComImagemAsync(visitante.email, nomeFesta, nomeLogin, convite, visitante.Visitante, numCrachaString, de, ate, "Convite", null);
+                        await _geral.EnviarEmailComImagemAsync(visitante.emailVisitante, nomeFesta, nomeLogin, convite, visitante.nomeVisitante, numCrachaString, de, ate, "Convite", null);
                     }
                 }
                 catch (Exception ex)
@@ -407,7 +407,7 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
 
                         var acesso = new Acessos
                         {
-                            IdOrigem = visitante,
+                            idVisitante = visitante,
                             de = novaFesta.de,
                             ate = novaFesta.ate
                         };
@@ -515,7 +515,7 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
                             await _visitanteR.AdicionarRelacaoFestaVisitanteAsync(visitanteFesta);
                             var acesso = new Acessos
                             {
-                                IdOrigem = visitante,
+                                idVisitante = visitante,
                                 de = festa.de,
                                 ate = festa.ate,
                             };
@@ -525,7 +525,7 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
                         {
                             var acesso = new Acessos
                             {
-                                IdOrigem = visitante,
+                                idVisitante = visitante,
                                 de = festa.de,
                                 ate = festa.ate
                             };

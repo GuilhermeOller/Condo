@@ -1,74 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\",
+  "WorkspaceRootPath": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Acesso_Visitantes_Web CleanCode\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\downloads\\acesso_visitantes_web cleancode\\acesso_visitantes_web cleancode\\views\\visitante\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:views\\visitante\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\documents\\git\\condo\\acesso_visitantes_web cleancode\\models\\logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:models\\logs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\downloads\\acesso_visitantes_web cleancode\\acesso_visitantes_web cleancode\\services\\implementations\\geral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:services\\implementations\\geral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\downloads\\acesso_visitantes_web cleancode\\acesso_visitantes_web cleancode\\services\\implementations\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:services\\implementations\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\downloads\\acesso_visitantes_web cleancode\\acesso_visitantes_web cleancode\\controllers\\loginapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:controllers\\loginapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\downloads\\acesso_visitantes_web cleancode\\acesso_visitantes_web cleancode\\models\\acessos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:models\\acessos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\downloads\\acesso_visitantes_web cleancode\\acesso_visitantes_web cleancode\\models\\festas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:models\\festas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\downloads\\acesso_visitantes_web cleancode\\acesso_visitantes_web cleancode\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\downloads\\acesso_visitantes_web cleancode\\acesso_visitantes_web cleancode\\controllers\\visitantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:controllers\\visitantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\downloads\\acesso_visitantes_web cleancode\\acesso_visitantes_web cleancode\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\downloads\\acesso_visitantes_web cleancode\\acesso_visitantes_web cleancode\\repositorys\\implementations\\geralrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:repositorys\\implementations\\geralrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\downloads\\acesso_visitantes_web cleancode\\acesso_visitantes_web cleancode\\repositorys\\implementations\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:repositorys\\implementations\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\downloads\\acesso_visitantes_web cleancode\\acesso_visitantes_web cleancode\\repositorys\\implementations\\visitanterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:repositorys\\implementations\\visitanterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\downloads\\acesso_visitantes_web cleancode\\acesso_visitantes_web cleancode\\repositorys\\interfaces\\ivisitanterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:repositorys\\interfaces\\ivisitanterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\downloads\\acesso_visitantes_web cleancode\\acesso_visitantes_web cleancode\\services\\implementations\\zapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:services\\implementations\\zapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\downloads\\acesso_visitantes_web cleancode\\acesso_visitantes_web cleancode\\services\\implementations\\visitanteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:services\\implementations\\visitanteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\downloads\\acesso_visitantes_web cleancode\\acesso_visitantes_web cleancode\\repositorys\\interfaces\\igeralrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:repositorys\\interfaces\\igeralrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\downloads\\acesso_visitantes_web cleancode\\acesso_visitantes_web cleancode\\repositorys\\interfaces\\iloginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:repositorys\\interfaces\\iloginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|c:\\users\\guigu\\documents\\git\\condo\\acesso_visitantes_web cleancode\\models\\apartamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Acesso_Moradores_Visitantes.csproj|solutionrelative:models\\apartamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -83,208 +23,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Views\\Visitante\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Visitante\\Index.cshtml",
-              "ToolTip": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Views\\Visitante\\Index.cshtml",
-              "RelativeToolTip": "Views\\Visitante\\Index.cshtml",
-              "ViewState": "AgIAAAgBAAAAAAAAAAAAABYBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-27T00:32:12.926Z",
+              "Title": "Logs.cs",
+              "DocumentMoniker": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Acesso_Visitantes_Web CleanCode\\Models\\Logs.cs",
+              "RelativeDocumentMoniker": "Models\\Logs.cs",
+              "ToolTip": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Acesso_Visitantes_Web CleanCode\\Models\\Logs.cs",
+              "RelativeToolTip": "Models\\Logs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T01:46:50.759Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Acessos.cs",
-              "DocumentMoniker": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Models\\Acessos.cs",
-              "RelativeDocumentMoniker": "Models\\Acessos.cs",
-              "ToolTip": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Models\\Acessos.cs",
-              "RelativeToolTip": "Models\\Acessos.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:49:20.738Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Festas.cs",
-              "DocumentMoniker": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Models\\Festas.cs",
-              "RelativeDocumentMoniker": "Models\\Festas.cs",
-              "ToolTip": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Models\\Festas.cs",
-              "RelativeToolTip": "Models\\Festas.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAwwCAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:48:51.541Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Models\\Login.cs",
-              "RelativeDocumentMoniker": "Models\\Login.cs",
-              "ToolTip": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Models\\Login.cs",
-              "RelativeToolTip": "Models\\Login.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:48:46.851Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:48:39.024Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoginApiController.cs",
-              "DocumentMoniker": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Controllers\\LoginApiController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LoginApiController.cs",
-              "ToolTip": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Controllers\\LoginApiController.cs",
-              "RelativeToolTip": "Controllers\\LoginApiController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:47:18.263Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "VisitanteController.cs",
-              "DocumentMoniker": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Controllers\\VisitanteController.cs",
-              "RelativeDocumentMoniker": "Controllers\\VisitanteController.cs",
-              "ToolTip": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Controllers\\VisitanteController.cs",
-              "RelativeToolTip": "Controllers\\VisitanteController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABpAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:46:30.552Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GeralRepository.cs",
-              "DocumentMoniker": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Repositorys\\Implementations\\GeralRepository.cs",
-              "RelativeDocumentMoniker": "Repositorys\\Implementations\\GeralRepository.cs",
-              "ToolTip": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Repositorys\\Implementations\\GeralRepository.cs",
-              "RelativeToolTip": "Repositorys\\Implementations\\GeralRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:46:17.929Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LoginRepository.cs",
-              "DocumentMoniker": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Repositorys\\Implementations\\LoginRepository.cs",
-              "RelativeDocumentMoniker": "Repositorys\\Implementations\\LoginRepository.cs",
-              "ToolTip": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Repositorys\\Implementations\\LoginRepository.cs",
-              "RelativeToolTip": "Repositorys\\Implementations\\LoginRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:46:10.958Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "VisitanteRepository.cs",
-              "DocumentMoniker": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Repositorys\\Implementations\\VisitanteRepository.cs",
-              "RelativeDocumentMoniker": "Repositorys\\Implementations\\VisitanteRepository.cs",
-              "ToolTip": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Repositorys\\Implementations\\VisitanteRepository.cs",
-              "RelativeToolTip": "Repositorys\\Implementations\\VisitanteRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:45:55.454Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Geral.cs",
-              "DocumentMoniker": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Services\\Implementations\\Geral.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\Geral.cs",
-              "ToolTip": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Services\\Implementations\\Geral.cs",
-              "RelativeToolTip": "Services\\Implementations\\Geral.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "Title": "Apartamento.cs",
+              "DocumentMoniker": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Acesso_Visitantes_Web CleanCode\\Models\\Apartamento.cs",
+              "RelativeDocumentMoniker": "Models\\Apartamento.cs",
+              "ToolTip": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Acesso_Visitantes_Web CleanCode\\Models\\Apartamento.cs",
+              "RelativeToolTip": "Models\\Apartamento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:45:24.385Z",
+              "WhenOpened": "2025-08-28T01:37:22.426Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginService.cs",
-              "DocumentMoniker": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Services\\Implementations\\LoginService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\LoginService.cs",
-              "ToolTip": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Services\\Implementations\\LoginService.cs",
-              "RelativeToolTip": "Services\\Implementations\\LoginService.cs",
-              "ViewState": "AgIAAN4AAAAAAAAAAAAcwOoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:45:13.162Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ZapiService.cs",
-              "DocumentMoniker": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Services\\Implementations\\ZapiService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\ZapiService.cs",
-              "ToolTip": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Services\\Implementations\\ZapiService.cs",
-              "RelativeToolTip": "Services\\Implementations\\ZapiService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:44:56.213Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "VisitanteService.cs",
-              "DocumentMoniker": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Services\\Implementations\\VisitanteService.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\VisitanteService.cs",
-              "ToolTip": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Services\\Implementations\\VisitanteService.cs",
-              "RelativeToolTip": "Services\\Implementations\\VisitanteService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:44:05.005Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IGeralRepository.cs",
-              "DocumentMoniker": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Repositorys\\Interfaces\\IGeralRepository.cs",
-              "RelativeDocumentMoniker": "Repositorys\\Interfaces\\IGeralRepository.cs",
-              "ToolTip": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Repositorys\\Interfaces\\IGeralRepository.cs",
-              "RelativeToolTip": "Repositorys\\Interfaces\\IGeralRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:41:04.579Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ILoginRepository.cs",
-              "DocumentMoniker": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Repositorys\\Interfaces\\ILoginRepository.cs",
-              "RelativeDocumentMoniker": "Repositorys\\Interfaces\\ILoginRepository.cs",
-              "ToolTip": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Repositorys\\Interfaces\\ILoginRepository.cs",
-              "RelativeToolTip": "Repositorys\\Interfaces\\ILoginRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:40:59.832Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IVisitanteRepository.cs",
-              "DocumentMoniker": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Repositorys\\Interfaces\\IVisitanteRepository.cs",
-              "RelativeDocumentMoniker": "Repositorys\\Interfaces\\IVisitanteRepository.cs",
-              "ToolTip": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Repositorys\\Interfaces\\IVisitanteRepository.cs",
-              "RelativeToolTip": "Repositorys\\Interfaces\\IVisitanteRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:40:57.457Z"
             }
           ]
         }

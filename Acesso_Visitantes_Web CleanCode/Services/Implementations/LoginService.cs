@@ -32,20 +32,20 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
                 return (false, mensagemErro);
 
             var usuario = await _loginR.BuscarUsuario(login.Usuario);
-            if (usuario == null || string.IsNullOrEmpty(usuario.Usuario))
+            if (usuario == null || string.IsNullOrEmpty(usuario.usuario))
                 return await FalhaLoginAsync(null, login.ip, "Usuário ou senha inválidos.");
 
             if (usuario.Status == "I")
                 return await FalhaLoginAsync(usuario, login.ip, "Usuário cadastrado como Inativo.");
 
-            if (usuario.TentativasLogin >= 5)
+            if (usuario.tentativasLogin >= 5)
                 return await FalhaLoginAsync(usuario, login.ip,
                     "Conta bloqueada devido a muitas tentativas falhas, entre em contato com a portaria.");
 
-            if (BCrypt.Net.BCrypt.Verify(login.Senha, usuario.Senha))
+            if (BCrypt.Net.BCrypt.Verify(login.Senha, usuario.senha))
                 return await SucessoLoginAsync(usuario, login.ip, httpContext);
 
-            usuario.TentativasLogin += 1;
+            usuario.tentativasLogin += 1;
             await RegistrarLogLoginAsync(usuario, login.ip, logou: 0);
             await _loginR.AtualizarUsuario(usuario);
 
@@ -66,12 +66,12 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
 
         private async Task<(bool, string)> SucessoLoginAsync(Login usuario, string ip, HttpContext httpContext)
         {
-            usuario.TentativasLogin = 0;
-            usuario.UltimoLogin = DateTime.Now;
+            usuario.tentativasLogin = 0;
+            usuario.ultimoLogin = DateTime.Now;
 
             await _loginR.AtualizarUsuario(usuario);
             await RegistrarLogLoginAsync(usuario, ip, logou: 1);
-            await GravarAuthCookieAsync(usuario.Id, usuario.NomeMorador, usuario.Tipo, usuario.Email, httpContext);
+            await GravarAuthCookieAsync(usuario.Id, usuario.NomeMorador, usuario.Tipo, usuario.email, httpContext);
 
             return (true, null);
         }
@@ -91,10 +91,10 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
 
             var log = new LogLogin
             {
-                Ip = ip,
-                Nome = usuario.NomeMorador,
-                Data = DateTime.Now,
-                Logou = logou
+                ip = ip,
+                idLogin = usuario.NomeMorador,
+                data = DateTime.Now,
+                flgLogou = logou
             };
 
             await _loginR.AdicionarLogAsync(log);
@@ -131,19 +131,19 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
 
         public async Task<(bool Sucesso, string Mensagem)> CadastrarAsync(Login login, HttpContext httpContext)
         {
-            string senhaHash = BCrypt.Net.BCrypt.HashPassword(login.Senha);
+            string senhaHash = BCrypt.Net.BCrypt.HashPassword(login.senha);
             var geral = new Geral(_config, _context, null, _httpClient, _geralR);
 
             bool codOk = await _geralR.VerificarCodCondominio(login.cod);
             if (!codOk)
                 return (false, "Código de condomínio incorreto!");
 
-            bool conflito = await _geralR.VerificarConflitoEmail(login.Email);
+            bool conflito = await _geralR.VerificarConflitoEmail(login.email);
             if (conflito)
                 return (false, "Email já cadastrado!");
 
-            var morador = await _geralR.VerificarMorador(login.Email);
-            var autorizado = await _geralR.VerificarAutorizado(login.Email);
+            var morador = await _geralR.VerificarMorador(login.email);
+            var autorizado = await _geralR.VerificarAutorizado(login.email);
 
             if (morador == null && autorizado == null)
                 return (false, "Email não cadastrado no sistema! Entrar em contato com condomínio");
@@ -151,18 +151,18 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
             var novoLogin = new Login
             {
                 Id = morador == null ? autorizado.IdAutorizado : morador.IdMorador,
-                Usuario = login.Usuario,
-                Senha = senhaHash,
+                usuario = login.usuario,
+                senha = senhaHash,
                 Status = morador == null ? autorizado.flgExcluido == 0 ? "a" : "i" : morador.flgStatus,
-                CriadoEm = DateTime.Now,
+                dtCriacao = DateTime.Now,
                 NomeMorador = morador == null ? autorizado.Nome : morador.Morador,
                 Tipo = morador == null ? "autorizado" : "morador",
-                Email = morador == null ? autorizado.email : morador.email
+                email = morador == null ? autorizado.email : morador.email
             };
-            if (await geral.CadastrarLoginFireBaseAsync(novoLogin.Usuario, novoLogin.Email, login.cod) )
+            if (await geral.CadastrarLoginFireBaseAsync(novoLogin.usuario, novoLogin.email, login.cod) )
             await _loginR.AdicionarUsuario(novoLogin);
 
-            await geral.GravarLogCadastroAsync(novoLogin.Usuario, login.ip);
+            await geral.GravarLogCadastroAsync(novoLogin.usuario, login.ip);
 
             return (true, "Usuário cadastrado com sucesso!");
         }
@@ -186,8 +186,8 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
 
             if (login != null)
             {
-                login.TokenResetSenha = token;
-                login.TokenExpiraEm = expiraToken;
+                login.tokenResetSenha = token;
+                login.dtExpiracaoToken = expiraToken;
             }
             await _loginR.AtualizarUsuario(login);
 
@@ -195,7 +195,7 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
 
             Geral.GravarEmailTemporario(email, httpContext);
 
-            await geral.GravarLogResetPasswordAsync(login.Usuario, email, ip);
+            await geral.GravarLogResetPasswordAsync(login.usuario, email, ip);
 
             return (true, "Token enviado para email!");
         }

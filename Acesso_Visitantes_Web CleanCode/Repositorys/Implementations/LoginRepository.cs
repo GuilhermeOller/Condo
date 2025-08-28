@@ -15,7 +15,7 @@ namespace Acesso_Moradores_Visitantes.Repositorys.Implementations
 
         public async Task<Login> BuscarUsuario(string input)
         {
-            return await _context.tblLoginMorador.FirstOrDefaultAsync(u => u.Usuario == input || u.Email == input);
+            return await _context.tblLoginMorador.FirstOrDefaultAsync(u => u.usuario == input || u.email == input);
         }
 
         public async Task AtualizarUsuario(Login usuario)

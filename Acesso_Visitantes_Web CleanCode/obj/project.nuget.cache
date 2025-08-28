@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bsvkLVk9Opc=",
+  "dgSpecHash": "FqJMfSDJt3Y=",
   "success": true,
-  "projectFilePath": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Acesso_Moradores_Visitantes.csproj",
+  "projectFilePath": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Acesso_Visitantes_Web CleanCode\\Acesso_Moradores_Visitantes.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\guigu\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\guigu\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -108,9 +108,9 @@
       "code": "NU1608",
       "level": "Warning",
       "message": "Versão detectada do pacote fora da restrição de dependência: QRCoder.Core 1.0.3 requer System.Drawing.Common (>= 6.0.0 && < 7.0.0), mas a versão System.Drawing.Common 9.0.4 foi resolvida.",
-      "projectPath": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Acesso_Moradores_Visitantes.csproj",
+      "projectPath": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Acesso_Visitantes_Web CleanCode\\Acesso_Moradores_Visitantes.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\guigu\\Downloads\\Acesso_Visitantes_Web CleanCode\\Acesso_Visitantes_Web CleanCode\\Acesso_Moradores_Visitantes.csproj",
+      "filePath": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Acesso_Visitantes_Web CleanCode\\Acesso_Moradores_Visitantes.csproj",
       "libraryId": "System.Drawing.Common",
       "targetGraphs": [
         "net8.0"

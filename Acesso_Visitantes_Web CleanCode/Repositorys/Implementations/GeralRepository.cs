@@ -15,7 +15,7 @@ namespace Acesso_Moradores_Visitantes.Repositorys.Implementations
 
         public async Task<bool> VerificarConflitoEmail(string email)
         {
-            return await _context.tblLoginMorador.AnyAsync(v => v.Email == email);
+            return await _context.tblLoginMorador.AnyAsync(v => v.email == email);
         }
 
         public async Task<bool> VerificarCodCondominio(string cod)
@@ -41,7 +41,7 @@ namespace Acesso_Moradores_Visitantes.Repositorys.Implementations
 
         public async Task<bool> VerificaToken(string token, string email)
         {
-            return await _context.tblLoginMorador.AnyAsync(v => v.TokenResetSenha == token & v.Email == email);
+            return await _context.tblLoginMorador.AnyAsync(v => v.tokenResetSenha == token & v.email == email);
         }
 
         public async Task<Moradores> VerificarMorador(string email)
@@ -56,30 +56,30 @@ namespace Acesso_Moradores_Visitantes.Repositorys.Implementations
 
         public async Task<Login> BuscarLoginPorEmail(string email)
         {
-            return await _context.tblLoginMorador.FirstOrDefaultAsync(v => v.Email == email);
+            return await _context.tblLoginMorador.FirstOrDefaultAsync(v => v.email == email);
         }
 
         public async Task UpdateSenha(string novaSenha, string email)
         {
-            Login login = await _context.tblLoginMorador.FirstOrDefaultAsync(v => v.Email == email);
+            Login login = await _context.tblLoginMorador.FirstOrDefaultAsync(v => v.email == email);
 
             if (login != null)
             {
-                login.Senha = novaSenha;
+                login.senha = novaSenha;
             }
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Condominio> BuscarCondominio()
+        public async Task<Apartamento> BuscarCondominio()
         {
             return await _context.tblEmpresa.FirstOrDefaultAsync();
         }
 
-        public async Task<Email> BuscarConfigEmail()
+        public async Task<EmailConfig> BuscarConfigEmail()
         {
             return await _context.tblEmail.FirstOrDefaultAsync();
         }
-        public async Task<Zapi> BuscarConfigZapi()
+        public async Task<ZapiConfig> BuscarConfigZapi()
         {
             return await _context.tblZAPI.FirstOrDefaultAsync();
         }

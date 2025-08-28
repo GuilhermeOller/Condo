@@ -6,26 +6,27 @@ namespace Acesso_Moradores_Visitantes.Models
     public class Login
     {
         [Key]
-        public long Id { get; set; }
+        public long idLogin { get; set; }
 
-        public string? Usuario { get; set; }
+        public long idMorador { get; set; }
 
-        [StringLength(30, MinimumLength = 6, ErrorMessage = "A senha deve ter entre 6 e 30 caracteres.")]
-        public string? Senha { get; set; }
+        public string? usuario { get; set; }
 
-        public int? NivelAcesso { get; set; }
-        public string? Status { get; set; }
-        public int? TentativasLogin { get; set; }
-        public DateTime? UltimoLogin { get; set; }
-        public DateTime? CriadoEm { get; set; }
-        public DateTime? AlteradoEm { get; set; }
-        public string? TokenResetSenha { get; set; }
-        public DateTime? TokenExpiraEm { get; set; }
+        [StringLength(25, MinimumLength = 6, ErrorMessage = "A senha deve ter entre 6 e 25 caracteres.")]
+        public string? senha { get; set; }
+
+        public DateTime? dtCriacao { get; set; }
+        public DateTime? dtAlteracao { get; set; }
+        public DateTime? dtExpiracaoToken { get; set; }
+        public string? tokenResetSenha { get; set; }
+        public DateTime? ultimoLogin { get; set; }
+        public int? tentativasLogin { get; set; }
         public string? NomeMorador { get; set; }
-        public string? Tipo { get; set; }
 
         [EmailAddress(ErrorMessage = "E-mail inválido.")]
-        public string? Email { get; set; }
+        public string? email { get; set; }
+
+
 
         [NotMapped]
         public string cod { get; set; }

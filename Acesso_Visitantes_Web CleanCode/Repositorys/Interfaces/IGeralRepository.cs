@@ -12,9 +12,9 @@ namespace Acesso_Moradores_Visitantes.Repositorys.Interfaces
         Task<Moradores> VerificarMorador(string email);
         Task<Autorizados> VerificarAutorizado(string email);
         Task<Login> BuscarLoginPorEmail(string email);
-        Task<Condominio> BuscarCondominio();
-        Task<Email> BuscarConfigEmail();
-        Task<Zapi> BuscarConfigZapi();
+        Task<Apartamento> BuscarCondominio();
+        Task<EmailConfig> BuscarConfigEmail();
+        Task<ZapiConfig> BuscarConfigZapi();
         Task UpdateSenha(string novaSenha, string email);
     }
 }

@@ -9,22 +9,19 @@ public class AppDbContext : DbContext
     }
     public DbSet<Acessos> tblAcessos { get; set; }
 
-    public DbSet<Visitantes> tblVisitante { get; set; }
-    public DbSet<Moradores> tblMorador { get; set; }
-    public DbSet<Autorizados> tblAutorizados { get; set; }
-    public DbSet<VisAcesso> tblVisAcesso { get; set; }
-    public DbSet<MorAcesso> tblMorAcesso { get; set; }
-    public DbSet<UsuarioVisitante> tblUsuarioVisitante { get; set; }
-    public DbSet<LogLogin> tblLogWebLogin { get; set; }
-    public DbSet<LogAcessos> tblLogWebAcessos { get; set; }
+    public DbSet<Visitantes> tblVisitantes { get; set; }
+    public DbSet<Moradores> tblMoradores { get; set; }
+    public DbSet<UsuarioVisitante> tblMorVis { get; set; }
+    public DbSet<LogLogin> tblLogLogin { get; set; }
+    public DbSet<LogAcessos> tblLogAcessos { get; set; }
     public DbSet<Festas> tblFestas { get; set; }
     public DbSet<FestaVisitante> tblFestaVisitante { get; set; }
-    public DbSet<Condominio> tblEmpresa { get; set; }
+    public DbSet<Apartamento> tblApartamento { get; set; }
     public DbSet<Login> tblLoginMorador { get; set; }
-    public DbSet<Email> tblEmail { get; set; }
+    public DbSet<EmailConfig> tblEmailConfig { get; set; }
     public DbSet<LogCadastro> tblLogWebCadastro { get; set; }
     public DbSet<LogResetPassword> tblLogWebResetPassword { get; set; }
-    public DbSet<Zapi> tblZAPI { get; set; }
+    public DbSet<ZapiConfig> tblZapiConfig { get; set; }
     public DbSet<Parametros> tblParametros { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

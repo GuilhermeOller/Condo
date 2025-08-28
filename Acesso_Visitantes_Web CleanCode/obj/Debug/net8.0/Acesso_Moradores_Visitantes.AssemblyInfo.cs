@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Acesso_Moradores_Visitantes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f42e7cbd2b539a75d5b36f7412319ff26586430")]
 [assembly: System.Reflection.AssemblyProductAttribute("Acesso_Moradores_Visitantes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Acesso_Moradores_Visitantes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

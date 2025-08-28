@@ -212,12 +212,12 @@ public class VisitanteController : Controller
         {
             var acessos = await _context.tblAcessos
                         .Where(v =>
-                            v.IdVisitado == idUsuario &&
+                            v.idMorador == idUsuario &&
                             v.TipoVisitado == tipoLogin &&
                             v.DtSaida == null)
                         .Select(v => new {
                             v.IdAcesso,
-                            v.VisitanteInfo.Visitante,
+                            v.VisitanteInfo.nomeVisitante,
                             v.DtEntrada,
                             v.DtSaida,
                             v.de,

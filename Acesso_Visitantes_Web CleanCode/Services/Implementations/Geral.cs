@@ -80,8 +80,8 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
                 var empresa = await _geralR.BuscarCondominio();
                 if (empresa != null)
                 {
-                    nomeCondominio = empresa.Fantazia;
-                    numeroCondominio = empresa.fax;
+                    nomeCondominio = empresa.nomeApartamento;
+                    numeroCondominio = empresa.telefoneApartamento;
                 }
 
                 var emailConfig = await _geralR.BuscarConfigEmail();
@@ -188,8 +188,8 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
             {
                 var novoLogin = new Login
                 {
-                    Usuario = usuario,
-                    Email = email,
+                    usuario = usuario,
+                    email = email,
                     cod = cod
                 };
 
@@ -219,7 +219,7 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
             {
                 NomeUsuario = usuario,
                 Data = DateTime.Now,
-                Ip = ip
+                ip = ip
             };
 
             return await _geralR.GravarLogCadastroAsync(logCadastro);
@@ -264,8 +264,8 @@ namespace Acesso_Moradores_Visitantes.Services.Implementations
                         await conn.OpenAsync();
 
                         var cmdEmpresa = await _geralR.BuscarCondominio();
-                        nomeCondominio = cmdEmpresa.Fantazia;
-                        numeroCondominio = cmdEmpresa.fax;
+                        nomeCondominio = cmdEmpresa.nomeApartamento;
+                        numeroCondominio = cmdEmpresa.telefoneApartamento;
 
                         var cmdZapi = await _geralR.BuscarConfigZapi();
                     }

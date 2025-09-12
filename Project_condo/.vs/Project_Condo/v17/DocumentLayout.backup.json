@@ -1,0 +1,258 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|c:\\users\\guigu\\documents\\git\\condo\\project_condo\\wwwroot\\js\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|solutionrelative:wwwroot\\js\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|c:\\users\\guigu\\documents\\git\\condo\\project_condo\\repositorys\\implementations\\visitanterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|solutionrelative:repositorys\\implementations\\visitanterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|c:\\users\\guigu\\documents\\git\\condo\\project_condo\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|c:\\users\\guigu\\documents\\git\\condo\\project_condo\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|solutionrelative:views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|c:\\users\\guigu\\documents\\git\\condo\\project_condo\\repositorys\\interfaces\\ivisitanterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|solutionrelative:repositorys\\interfaces\\ivisitanterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|c:\\users\\guigu\\documents\\git\\condo\\project_condo\\controllers\\visitantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|solutionrelative:controllers\\visitantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|c:\\users\\guigu\\documents\\git\\condo\\project_condo\\services\\implementations\\visitanteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|solutionrelative:services\\implementations\\visitanteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|c:\\users\\guigu\\documents\\git\\condo\\project_condo\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|solutionrelative:models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|c:\\users\\guigu\\documents\\git\\condo\\project_condo\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|solutionrelative:wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|c:\\users\\guigu\\documents\\git\\condo\\project_condo\\controllers\\loginapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|solutionrelative:controllers\\loginapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|c:\\users\\guigu\\documents\\git\\condo\\project_condo\\wwwroot\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|solutionrelative:wwwroot\\js\\login.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|c:\\users\\guigu\\documents\\git\\condo\\project_condo\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|solutionrelative:wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|c:\\users\\guigu\\documents\\git\\condo\\project_condo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|c:\\users\\guigu\\documents\\git\\condo\\project_condo\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B07C7582-EDDF-4302-A79F-2E999975F60E}|Project_Condo.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IVisitanteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Repositorys\\Interfaces\\IVisitanteRepository.cs",
+              "RelativeDocumentMoniker": "Repositorys\\Interfaces\\IVisitanteRepository.cs",
+              "ToolTip": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Repositorys\\Interfaces\\IVisitanteRepository.cs",
+              "RelativeToolTip": "Repositorys\\Interfaces\\IVisitanteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T23:25:10.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Models\\Login.cs",
+              "RelativeDocumentMoniker": "Models\\Login.cs",
+              "ToolTip": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Models\\Login.cs",
+              "RelativeToolTip": "Models\\Login.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T23:22:24.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VisitanteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Repositorys\\Implementations\\VisitanteRepository.cs",
+              "RelativeDocumentMoniker": "Repositorys\\Implementations\\VisitanteRepository.cs",
+              "ToolTip": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Repositorys\\Implementations\\VisitanteRepository.cs",
+              "RelativeToolTip": "Repositorys\\Implementations\\VisitanteRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAADgvxEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T23:21:43.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VisitanteService.cs",
+              "DocumentMoniker": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Services\\Implementations\\VisitanteService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\VisitanteService.cs",
+              "ToolTip": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Services\\Implementations\\VisitanteService.cs",
+              "RelativeToolTip": "Services\\Implementations\\VisitanteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T22:44:29.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "Views\\Login\\Index.cshtml",
+              "ViewState": "AgIAALoAAAAAAAAAAAAAANIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-11T22:18:15.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAGcBAAAAAAAAAAAAAH8BAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-11T22:04:36.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "home.js",
+              "DocumentMoniker": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\wwwroot\\js\\home.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\home.js",
+              "ToolTip": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\wwwroot\\js\\home.js",
+              "RelativeToolTip": "wwwroot\\js\\home.js",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAAAJgAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-09-11T22:08:02.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "login.css",
+              "DocumentMoniker": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\wwwroot\\css\\login.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\login.css",
+              "ToolTip": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\wwwroot\\css\\login.css",
+              "RelativeToolTip": "wwwroot\\css\\login.css",
+              "ViewState": "AgIAAFcBAAAAAAAAAAAwwGYBAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-11T22:18:06.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "login.js",
+              "DocumentMoniker": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\wwwroot\\js\\login.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\login.js",
+              "ToolTip": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\wwwroot\\js\\login.js",
+              "RelativeToolTip": "wwwroot\\js\\login.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-09-11T22:17:48.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "home.css",
+              "DocumentMoniker": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\wwwroot\\css\\home.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\home.css",
+              "ToolTip": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\wwwroot\\css\\home.css",
+              "RelativeToolTip": "wwwroot\\css\\home.css",
+              "ViewState": "AgIAAMkBAAAAAAAAAAAwwNoBAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-09-11T22:08:13.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VisitanteController.cs",
+              "DocumentMoniker": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Controllers\\VisitanteController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VisitanteController.cs",
+              "ToolTip": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Controllers\\VisitanteController.cs",
+              "RelativeToolTip": "Controllers\\VisitanteController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAkwCwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T21:58:29.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginApiController.cs",
+              "DocumentMoniker": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Controllers\\LoginApiController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginApiController.cs",
+              "ToolTip": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Controllers\\LoginApiController.cs",
+              "RelativeToolTip": "Controllers\\LoginApiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T21:56:13.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T21:58:24.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\guigu\\Documents\\Git\\Condo\\Project_condo\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T21:57:50.959Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+<div id="app-container">
+    <!-- Tela de Login -->
+    <div class="screen active" id="login-screen">
+        <div class="app-header">
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div>
+                    <div class="brand-name">Vivência</div>
+                    <div class="brand-tagline">Portal do Condomínio</div>
+                </div>
+            </div>
+            <h2>Acesso Visitante</h2>
+        </div>
+
+        <div class="card">
+            <div class="input-group">
+                <label for="usuario">Usuário</label>
+                <i class="fas fa-user"></i>
+                <input type="text" id="usuario" placeholder="Digite o usuário ou email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="senha">Senha</label>
+                <i class="fas fa-lock"></i>
+                <input type="password" id="senha" placeholder="Digite sua senha" required>
+            </div>
+
+            <a class="forgot-password" onclick="showScreen('recover-step1')">Esqueceu a senha?</a>
+
+            <button class="btn" onclick="fazerLogin()">
+                <i class="fas fa-sign-in-alt"></i> Entrar
+            </button>
+
+            <div class="loading" id="loading">
+                <i class="fas fa-spinner"></i> Autenticando...
+            </div>
+
+            <div class="error" id="error"></div>
+        </div>
+
+        <p class="link-text">
+            Não tem conta? <a href="#" onclick="showScreen('register-screen')">Solicitar acesso</a>
+        </p>
+    </div>
+
+    <!-- Tela de Cadastro -->
+    <div class="screen" id="register-screen">
+        <div class="app-header">
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <div>
+                    <div class="brand-name">Vivência</div>
+                    <div class="brand-tagline">Solicitar Acesso</div>
+                </div>
+            </div>
+            <h2>Solicitar Nova Conta</h2>
+        </div>
+
+        <div class="card">
+            <div class="input-group">
+                <label for="cadEmail">E-mail</label>
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="cadEmail" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <div class="input-group">
+                <label for="cadUsuario">Usuário</label>
+                <i class="fas fa-at"></i>
+                <input type="text" id="cadUsuario" placeholder="Digite um nome de usuário" required>
+            </div>
+
+            <div class="input-group">
+                <label for="cadSenha">Senha</label>
+                <i class="fas fa-lock"></i>
+                <input type="password" id="cadSenha" placeholder="Digite sua senha" required>
+            </div>
+
+            <button class="btn btn-secondary" onclick="cadastrar()">
+                <i class="fas fa-user-plus"></i> Solicitar Acesso
+            </button>
+        </div>
+
+        <p class="link-text">
+            Já tem uma conta? <a href="#" onclick="showScreen('login-screen')">Faça login</a>
+        </p>
+    </div>
+
+    <!-- Telas de Recuperação de Senha (3 etapas) -->
+    <div class="screen" id="recover-step1">
+        <div class="app-header">
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fas fa-key"></i>
+                </div>
+                <div>
+                    <div class="brand-name">Vivência</div>
+                    <div class="brand-tagline">Recuperar Senha</div>
+                </div>
+            </div>
+            <h2>Recuperar Senha</h2>
+        </div>
+
+        <div class="recovery-steps">
+            <div class="step active">1</div>
+            <div class="step">2</div>
+            <div class="step">3</div>
+        </div>
+
+        <div class="card">
+            <p style="margin-bottom: 25px; color: var(--text-light); font-size: 0.95rem; text-align: center;">
+                Digite seu e-mail para receber o código de verificação
+            </p>
+
+            <div class="input-group">
+                <label for="recover-email">E-mail</label>
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="recover-email" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <button class="btn" onclick="sendRecoveryCode()">
+                <i class="fas fa-paper-plane"></i> Enviar Código
+            </button>
+        </div>
+
+        <p class="link-text">
+            <a href="#" onclick="showScreen('login-screen')">
+                <i class="fas fa-arrow-left" style="margin-right: 5px;"></i> Voltar para login
+            </a>
+        </p>
+    </div>
+
+    <div class="screen" id="recover-step2">
+        <div class="app-header">
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fas fa-key"></i>
+                </div>
+                <div>
+                    <div class="brand-name">Vivência</div>
+                    <div class="brand-tagline">Verificação</div>
+                </div>
+            </div>
+            <h2>Verifique seu e-mail</h2>
+        </div>
+
+        <div class="recovery-steps">
+            <div class="step completed">1</div>
+            <div class="step active">2</div>
+            <div class="step">3</div>
+        </div>
+
+        <div class="card">
+            <p style="margin-bottom: 25px; color: var(--text-light); font-size: 0.95rem; text-align: center;">
+                Enviamos um código para <span id="email-display" style="font-weight: 600; color: var(--primary-color);"></span>
+            </p>
+
+            <div class="input-group">
+                <label for="recovery-code">Código de verificação</label>
+                <i class="fas fa-shield-alt"></i>
+                <input type="text" id="recovery-code" placeholder="Digite o código recebido" required>
+            </div>
+
+            <button class="btn" onclick="verifyRecoveryCode()">
+                <i class="fas fa-check"></i> Verificar
+            </button>
+        </div>
+    </div>
+
+    <div class="screen" id="recover-step3">
+        <div class="app-header">
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fas fa-key"></i>
+                </div>
+                <div>
+                    <div class="brand-name">Vivência</div>
+                    <div class="brand-tagline">Nova Senha</div>
+                </div>
+            </div>
+            <h2>Nova Senha</h2>
+        </div>
+
+        <div class="recovery-steps">
+            <div class="step completed">1</div>
+            <div class="step completed">2</div>
+            <div class="step active">3</div>
+        </div>
+
+        <div class="card">
+            <p style="margin-bottom: 25px; color: var(--text-light); font-size: 0.95rem; text-align: center;">
+                Digite e confirme sua nova senha
+            </p>
+
+            <div class="input-group">
+                <label for="new-password">Nova Senha</label>
+                <i class="fas fa-lock"></i>
+                <input type="password" id="new-password" placeholder="Digite sua nova senha" required>
+            </div>
+
+            <div class="input-group">
+                <label for="confirm-password">Confirmar Senha</label>
+                <i class="fas fa-lock"></i>
+                <input type="password" id="confirm-password" placeholder="Confirme sua nova senha" required>
+            </div>
+
+            <button class="btn" onclick="updatePassword()">
+                <i class="fas fa-save"></i> Salvar Nova Senha
+            </button>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="~/css/login.css">
+<script src="~/js/login.js"></script>

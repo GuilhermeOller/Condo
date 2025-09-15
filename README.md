@@ -36,6 +36,7 @@ Login:
 
 -Realização de login
 
+
 Home principal:
 -Cadastro de visitante
 
@@ -58,6 +59,7 @@ Home principal:
 -Recebimento de encomenda(Em desenvolvimento)
 
 -Baixa de encomenda(Em desenvolvimento)
+
 
 Home admin(Em desenvolvimento):
 -Cadastro de morador

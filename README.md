@@ -29,7 +29,8 @@ O projeto foi simplificado intencionalmente. Muitas complexidades poderiam ter s
 
 ## Funções
 
-Login:
+#Login:
+
 -Cadastro de login
 
 -Recuperação de senha
@@ -37,7 +38,8 @@ Login:
 -Realização de login
 
 
-Home principal:
+#Home principal:
+
 -Cadastro de visitante
 
 -Edição de visitante
@@ -61,7 +63,8 @@ Home principal:
 -Baixa de encomenda(Em desenvolvimento)
 
 
-Home admin(Em desenvolvimento):
+#Home admin(Em desenvolvimento):
+
 -Cadastro de morador
 
 -Edição de morador

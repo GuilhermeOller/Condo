@@ -1,114 +1,70 @@
-# Condo
+# 🏢 ProjectCondo
 
+Bem-vindo ao **ProjectCondo**!  
 
+Este aplicativo está em desenvolvimento e foi criado como **portfólio** para demonstrar minhas habilidades em:
 
-Olá, seja bem-vindo ao ProjectCondo!
+- ⚡ **.NET 8**
+- 🖥️ **ASP.NET Core MVC**
+- 💻 **C#**
+- 🎨 **HTML, CSS, JavaScript**
+- 🗄️ **SQL Server**
+- 🧩 **Arquitetura limpa**
+- ✅ **Clean Code**
 
+---
 
+## 🚧 Observações
 
-Este aplicativo (atualmente em desenvolvimento) serve como portfólio para demonstrar minhas habilidades em:
+Algumas funcionalidades estão desabilitadas no projeto por questões técnicas ou de privacidade:
 
-.NET 8, ASP.NET Core, MVC, C#, HTML, CSS, JavaScript, SQL Server, arquitetura limpa e clean code.
+- 📷 **Leitura de QR Code de acesso** (limitação física)  
+- 🌐 **Leitura do IP público** para geração de logs, envio de e-mails e WhatsApp (restrição de privacidade)  
 
+O projeto foi **intencionalmente simplificado**. Várias complexidades poderiam ser implementadas, mas foram retiradas para manter o foco em **demonstrar competências técnicas**.
 
+---
 
-Algumas funcionalidades estão desabilitadas:
+## ✨ Funcionalidades
 
+### 🔑 Login
+- Cadastro de login  
+- Recuperação de senha  
+- Realização de login  
 
+### 🏠 Home Principal
+- Cadastro, edição e exclusão de visitantes  
+- Liberação de visitante (representativo)  
+- Baixa de acesso do visitante  
+- Cadastro de festa (liberação múltipla de visitantes)  
+- Envio de convite por e-mail ou WhatsApp (representativo)  
+- Edição de festa (mensagem adaptada conforme o visitante e a festa)  
+- Exclusão de festa  
+- Recebimento de encomenda *(em desenvolvimento)*  
+- Baixa de encomenda *(em desenvolvimento)*  
 
-Leitura de QR Code de acesso (limitação física).
+### ⚙️ Home Admin *(em desenvolvimento)*
+- Cadastro, edição e exclusão de moradores  
+- Configuração de e-mail  
+- Configuração do **Zapi**  
+- Cadastro de encomendas  
 
+---
 
+## 🛠️ Instalação
 
-Leitura do IP público para geração de logs, envio de e-mail e mensagens WhatsApp (por questões de privacidade).
+1. Instale o **SQL Server 2022** junto com o **SSMS (20 ou superior)**.  
+2. Execute o script disponível na pasta `Sql` para criar a base de dados.  
+3. Para testar localmente:  
+   - Você pode configurar o **IIS**, ou  
+   - Basta abrir o arquivo especificado para iniciar o site.  
 
+---
 
+## 🔐 Login Padrão do Administrador
+- **Usuário:** `admin`  
+- **Senha:** `admin`  
 
-O projeto foi simplificado intencionalmente. Muitas complexidades poderiam ter sido implementadas, mas foram retiradas para manter o foco em demonstrar minhas competências.
-
-
-## Funções
-
-# Login:
-
--Cadastro de login
-
--Recuperação de senha
-
--Realização de login
-
-
-# Home principal:
-
--Cadastro de visitante
-
--Edição de visitante
-
--Exclusão de visitante
-
--Liberação de visitante (representativo)
-
--Baixa do acesso do visitante
-
--Cadastro de festa (liberação multipla de visitantes)
-
--Envio de convite por email ou whatsapp (representativo)
-
--Edição de festa (com mensagem adaptada ao caso do visitante quanto a festa)
-
--Exclusão de festa
-
--Recebimento de encomenda(Em desenvolvimento)
-
--Baixa de encomenda(Em desenvolvimento)
-
-
-# Home admin(Em desenvolvimento):
-
--Cadastro de morador
-
--Edição de morador
-
--Exclusão de morador
-
--Configuração de email
-
--Configaração do Zapi
-
--Cadastro de encomenda
-
-
-## Instalação
-
-
-
--Instale o SQL Server 2022 junto com o SSMS (20 ou superior).
-
-
-
--Execute o script disponível na pasta Sql para criar a base de dados.
-
-
-
--Para testar localmente, você poderia configurar o IIS, mas basta abrir o arquivo especificado para iniciar o site.
-
-
-
--Login padrão do administrador:
-
-
-
-&nbsp;	Usuário: admin
-
-
-
-&nbsp;	Senha: admin
-
-
-
--Cadastre um morador e faça o login na tela de login.
-
-
-
--Como o envio de e-mails está desativado, o código para redefinir a senha será sempre: 12345678.
-
+Após o login inicial:
+- Cadastre um morador e faça login na tela de login.  
+- Como o envio de e-mails está desativado, o código para redefinir senha será sempre:  

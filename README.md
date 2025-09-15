@@ -31,28 +31,45 @@ O projeto foi simplificado intencionalmente. Muitas complexidades poderiam ter s
 
 Login:
 -Cadastro de login
+
 -Recuperação de senha
+
 -Realização de login
 
 Home principal:
 -Cadastro de visitante
+
 -Edição de visitante
+
 -Exclusão de visitante
+
 -Liberação de visitante (representativo)
+
 -Baixa do acesso do visitante
+
 -Cadastro de festa (liberação multipla de visitantes)
+
 -Envio de convite por email ou whatsapp (representativo)
+
 -Edição de festa (com mensagem adaptada ao caso do visitante quanto a festa)
+
 -Exclusão de festa
+
 -Recebimento de encomenda(Em desenvolvimento)
+
 -Baixa de encomenda(Em desenvolvimento)
 
 Home admin(Em desenvolvimento):
 -Cadastro de morador
+
 -Edição de morador
+
 -Exclusão de morador
+
 -Configuração de email
+
 -Configaração do Zapi
+
 -Cadastro de encomenda
 
 

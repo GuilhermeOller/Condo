@@ -29,7 +29,7 @@ O projeto foi simplificado intencionalmente. Muitas complexidades poderiam ter s
 
 ## Funções
 
-#Login:
+# Login:
 
 -Cadastro de login
 
@@ -38,7 +38,7 @@ O projeto foi simplificado intencionalmente. Muitas complexidades poderiam ter s
 -Realização de login
 
 
-#Home principal:
+# Home principal:
 
 -Cadastro de visitante
 
@@ -63,7 +63,7 @@ O projeto foi simplificado intencionalmente. Muitas complexidades poderiam ter s
 -Baixa de encomenda(Em desenvolvimento)
 
 
-#Home admin(Em desenvolvimento):
+# Home admin(Em desenvolvimento):
 
 -Cadastro de morador
 
